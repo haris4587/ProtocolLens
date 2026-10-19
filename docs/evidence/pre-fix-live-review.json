@@ -1,0 +1,101 @@
+{
+  "schema": "protocollens.receipt.v1",
+  "chain_id": 61999,
+  "contract": "0x2B8f909AC388a5b61400a0c94Ee6D4e4401FfBB8",
+  "source_sha256": "c592d3b67cffc2fa063a8d11dff55d863d3e0b31df23d18018a29714e7c5f140",
+  "read_state": "LATEST_FINAL",
+  "transactions": [
+    {
+      "hash": "0xba8115d8fb76366f9cbb93a548c7b59c2eb17b255de2e553b922d9d6d286e44f",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "mode": "NORMAL",
+      "votes": {
+        "0x17ac0CaefB18205c737e64ee582c9245A28ca1f9": "idle",
+        "0x7bf4Ea55363bbe73A4dd5b3900bf03c978A63b6e": "idle",
+        "0x8Ce1805d6970d54748dE7160b5b395dCC5c71F44": "agree",
+        "0xad7d13f269CeAd4379E64a1A3a0803a827e70B43": "agree",
+        "0xe7eEe8a1c1690b0322d795B80A76ab2Cd1a0eAFd": "agree"
+      }
+    },
+    {
+      "hash": "0x792d360c921ce9b71015fc8022e4846a5fe7ae97ea04e1530cc579964c1335e3",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "mode": "NORMAL",
+      "votes": {
+        "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1": "agree",
+        "0x6a4179A851B3747A458baD2f089AB2EeFE0eBbAb": "agree",
+        "0xa21bc502E3578E4b3039be8c59a257198f7c3f19": "idle",
+        "0xad7d13f269CeAd4379E64a1A3a0803a827e70B43": "agree",
+        "0xb0925568bFbCF00aADBcA053E6D0E1628ff3d530": "idle"
+      }
+    },
+    {
+      "hash": "0x0d656f50bb0e3c2e7d3a03adf1b97ff8308382545a3eac39ac885341caba558c",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "mode": "NORMAL",
+      "votes": {
+        "0x40533175AfBbAee2c030F88259Afb5aEDbCF0E05": "idle",
+        "0x6a4179A851B3747A458baD2f089AB2EeFE0eBbAb": "agree",
+        "0x8a876C3F3a4783Bd123982bcBF3c672dc0239004": "agree",
+        "0xa21bc502E3578E4b3039be8c59a257198f7c3f19": "idle",
+        "0xf1C7551292319EE334e2D8A24eAC108Bd4C63b21": "agree"
+      }
+    },
+    {
+      "hash": "0x97357c29a57c3e5ead9f484f31b7cadfd92f984fa07fe595bbdc5ca3a30ac063",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "mode": "NORMAL",
+      "votes": {
+        "0x2FcBC452425f2F1e102c5c04b4331fcB46ee1c00": "idle",
+        "0x892C437da9b9CA0b6017B6f046F58E3526B46ec6": "agree",
+        "0xad7d13f269CeAd4379E64a1A3a0803a827e70B43": "agree",
+        "0xb0925568bFbCF00aADBcA053E6D0E1628ff3d530": "agree"
+      }
+    }
+  ],
+  "record": {
+    "commitment": "934a8bc72c480825dccf204c569e1438efb680a6ea15de5ba29cd517f0676b20",
+    "creator": "0x34491d9a9492Cd6213dAb2E541AEd796DaE1Bca8",
+    "history": [
+      {
+        "attempt": 1,
+        "commitment": "934a8bc72c480825dccf204c569e1438efb680a6ea15de5ba29cd517f0676b20",
+        "decision_hash": "c575b2647d855c3309fcd5128ae5fb871b3cbcb96e2af4fb88e55c6818098db4",
+        "previous_hash": "934a8bc72c480825dccf204c569e1438efb680a6ea15de5ba29cd517f0676b20",
+        "report": {
+          "checks": [],
+          "outcome": "INCONCLUSIVE",
+          "reason": "MODEL_OUTPUT_INVALID"
+        }
+      },
+      {
+        "attempt": 2,
+        "commitment": "934a8bc72c480825dccf204c569e1438efb680a6ea15de5ba29cd517f0676b20",
+        "decision_hash": "74c8efb52421f097dafdc98ce597df144f1fc06d40915f643d20a440d32d878d",
+        "previous_hash": "c575b2647d855c3309fcd5128ae5fb871b3cbcb96e2af4fb88e55c6818098db4",
+        "report": {
+          "checks": [],
+          "outcome": "INCONCLUSIVE",
+          "reason": "MODEL_OUTPUT_INVALID"
+        }
+      }
+    ],
+    "id": "1",
+    "policy": "protocollens-1",
+    "registration": {
+      "bytes": 628,
+      "sha256": "b96c9871ca67897a3a01897b8275456517e2c2e2904767ba203efa434805b124",
+      "url": "https://raw.githubusercontent.com/haris4587/ProtocolLens/a5f97b0fb4838f7a83f219a103023a1346cab2c7/examples/registration.txt"
+    },
+    "study": {
+      "bytes": 735,
+      "sha256": "51eaf302eb9e30f4b6124853e8ca7810ffe5b1db3bd4494ae5844785a02e211b",
+      "url": "https://raw.githubusercontent.com/haris4587/ProtocolLens/a5f97b0fb4838f7a83f219a103023a1346cab2c7/examples/study.txt"
+    },
+    "title": "PL-001 — unexplained primary outcome switch (synthetic)"
+  }
+}

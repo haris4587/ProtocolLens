@@ -1,86 +1,92 @@
 {
   "schema": "protocollens.receipt.v1",
   "chain_id": 61999,
-  "contract": "0x2B8f909AC388a5b61400a0c94Ee6D4e4401FfBB8",
-  "source_sha256": "c592d3b67cffc2fa063a8d11dff55d863d3e0b31df23d18018a29714e7c5f140",
+  "contract": "0x6E1fE2A506e4aA6a86c3a4d64d741A2c5a6E7427",
+  "source_sha256": "bbdd7b352510f26c128ebcd3838f2419e1e1c7b9b303ae74027094758a00b6e7",
   "read_state": "LATEST_FINAL",
   "transactions": [
     {
-      "hash": "0xba8115d8fb76366f9cbb93a548c7b59c2eb17b255de2e553b922d9d6d286e44f",
+      "hash": "0x2356d0e589e65aef6df512aaeb39a045ccb89670bb852141d66a1b44be00a880",
       "status": "FINALIZED",
       "execution": "SUCCESS",
       "mode": "NORMAL",
       "votes": {
-        "0x17ac0CaefB18205c737e64ee582c9245A28ca1f9": "idle",
-        "0x7bf4Ea55363bbe73A4dd5b3900bf03c978A63b6e": "idle",
-        "0x8Ce1805d6970d54748dE7160b5b395dCC5c71F44": "agree",
-        "0xad7d13f269CeAd4379E64a1A3a0803a827e70B43": "agree",
-        "0xe7eEe8a1c1690b0322d795B80A76ab2Cd1a0eAFd": "agree"
+        "0x17ac0CaefB18205c737e64ee582c9245A28ca1f9": "agree",
+        "0x40533175AfBbAee2c030F88259Afb5aEDbCF0E05": "agree",
+        "0x6a4179A851B3747A458baD2f089AB2EeFE0eBbAb": "agree",
+        "0x9244De5F20cB75A0c51d79A9A3208D00a99aFc10": "agree",
+        "0xf29b6947ed298d139FC2655DB15D868C9AbB3091": "agree"
       }
     },
     {
-      "hash": "0x792d360c921ce9b71015fc8022e4846a5fe7ae97ea04e1530cc579964c1335e3",
+      "hash": "0xd7a882e5590efdd697073289c85f43650850e385b2b09696c4aa5a7423ae5548",
       "status": "FINALIZED",
       "execution": "SUCCESS",
       "mode": "NORMAL",
       "votes": {
-        "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1": "agree",
-        "0x6a4179A851B3747A458baD2f089AB2EeFE0eBbAb": "agree",
-        "0xa21bc502E3578E4b3039be8c59a257198f7c3f19": "idle",
-        "0xad7d13f269CeAd4379E64a1A3a0803a827e70B43": "agree",
+        "0x0B50B270Eba5D9B780272C4Cf4720260177e761D": "agree",
+        "0x2FcBC452425f2F1e102c5c04b4331fcB46ee1c00": "idle",
+        "0x40533175AfBbAee2c030F88259Afb5aEDbCF0E05": "agree",
+        "0xa21bc502E3578E4b3039be8c59a257198f7c3f19": "agree",
         "0xb0925568bFbCF00aADBcA053E6D0E1628ff3d530": "idle"
       }
     },
     {
-      "hash": "0x0d656f50bb0e3c2e7d3a03adf1b97ff8308382545a3eac39ac885341caba558c",
+      "hash": "0x500e2c45fd5ade323a303e0ca4435b646770990579fbde34a4df33c8328cf014",
       "status": "FINALIZED",
       "execution": "SUCCESS",
       "mode": "NORMAL",
       "votes": {
-        "0x40533175AfBbAee2c030F88259Afb5aEDbCF0E05": "idle",
-        "0x6a4179A851B3747A458baD2f089AB2EeFE0eBbAb": "agree",
-        "0x8a876C3F3a4783Bd123982bcBF3c672dc0239004": "agree",
-        "0xa21bc502E3578E4b3039be8c59a257198f7c3f19": "idle",
-        "0xf1C7551292319EE334e2D8A24eAC108Bd4C63b21": "agree"
-      }
-    },
-    {
-      "hash": "0x97357c29a57c3e5ead9f484f31b7cadfd92f984fa07fe595bbdc5ca3a30ac063",
-      "status": "FINALIZED",
-      "execution": "SUCCESS",
-      "mode": "NORMAL",
-      "votes": {
-        "0x2FcBC452425f2F1e102c5c04b4331fcB46ee1c00": "idle",
-        "0x892C437da9b9CA0b6017B6f046F58E3526B46ec6": "agree",
-        "0xad7d13f269CeAd4379E64a1A3a0803a827e70B43": "agree",
-        "0xb0925568bFbCF00aADBcA053E6D0E1628ff3d530": "agree"
+        "0x40533175AfBbAee2c030F88259Afb5aEDbCF0E05": "agree",
+        "0x8Ce1805d6970d54748dE7160b5b395dCC5c71F44": "disagree",
+        "0x9244De5F20cB75A0c51d79A9A3208D00a99aFc10": "disagree",
+        "0xa21bc502E3578E4b3039be8c59a257198f7c3f19": "agree",
+        "0xe7eEe8a1c1690b0322d795B80A76ab2Cd1a0eAFd": "agree"
       }
     }
   ],
   "record": {
-    "commitment": "934a8bc72c480825dccf204c569e1438efb680a6ea15de5ba29cd517f0676b20",
-    "creator": "0x34491d9a9492Cd6213dAb2E541AEd796DaE1Bca8",
+    "commitment": "b7bcd175895a5391344778bef7757c18456ec5c004949cd6e2746dff3178a493",
+    "creator": "0x1C1cC1690F2dd6877d965c13F680D72eDF1FB440",
     "history": [
       {
         "attempt": 1,
-        "commitment": "934a8bc72c480825dccf204c569e1438efb680a6ea15de5ba29cd517f0676b20",
-        "decision_hash": "c575b2647d855c3309fcd5128ae5fb871b3cbcb96e2af4fb88e55c6818098db4",
-        "previous_hash": "934a8bc72c480825dccf204c569e1438efb680a6ea15de5ba29cd517f0676b20",
+        "commitment": "b7bcd175895a5391344778bef7757c18456ec5c004949cd6e2746dff3178a493",
+        "decision_hash": "4b4de46beb2a3e41e97af98689982cb00a968709fc010aed45755556cd277f78",
+        "previous_hash": "b7bcd175895a5391344778bef7757c18456ec5c004949cd6e2746dff3178a493",
         "report": {
-          "checks": [],
-          "outcome": "INCONCLUSIVE",
-          "reason": "MODEL_OUTPUT_INVALID"
-        }
-      },
-      {
-        "attempt": 2,
-        "commitment": "934a8bc72c480825dccf204c569e1438efb680a6ea15de5ba29cd517f0676b20",
-        "decision_hash": "74c8efb52421f097dafdc98ce597df144f1fc06d40915f643d20a440d32d878d",
-        "previous_hash": "c575b2647d855c3309fcd5128ae5fb871b3cbcb96e2af4fb88e55c6818098db4",
-        "report": {
-          "checks": [],
-          "outcome": "INCONCLUSIVE",
-          "reason": "MODEL_OUTPUT_INVALID"
+          "checks": [
+            {
+              "category": "primary_outcome",
+              "explanation": "The study swapped the primary and secondary outcomes. The registration designated sleep quality score as the primary outcome, but the study report designates mean daily step count as the primary outcome. No explanation for this reversal is provided in the study text.",
+              "finding": "UNEXPLAINED",
+              "registration_quote": "Primary outcome: Change in self-reported sleep quality score from baseline to week 4.",
+              "study_quote": "Primary outcome: Mean daily step count at week 4."
+            },
+            {
+              "category": "planned_analyses",
+              "explanation": "The analyses performed in the study report match the intention-to-treat comparisons and specific metrics planned in the preregistration.",
+              "finding": "MATCH",
+              "registration_quote": "Planned analyses: Intention-to-treat comparison of sleep quality change between randomized groups; secondary comparison of mean daily step count.",
+              "study_quote": "Analyses reported: Intention-to-treat comparison of sleep quality change between randomized groups; secondary comparison of mean daily step count."
+            },
+            {
+              "category": "population",
+              "explanation": "The population characteristics, including age range, condition, and randomization method, are identical in both documents.",
+              "finding": "MATCH",
+              "registration_quote": "Population: Adults aged 25–60 with self-reported poor sleep, randomized to walking program or usual activity.",
+              "study_quote": "Population: Adults aged 25–60 with self-reported poor sleep, randomized to walking program or usual activity."
+            },
+            {
+              "category": "sample_size",
+              "explanation": "The reported sample size and group allocation match the preregistration exactly.",
+              "finding": "MATCH",
+              "registration_quote": "Sample size: 120 participants, 60 in each group.",
+              "study_quote": "Sample size: 120 participants, 60 in each group."
+            }
+          ],
+          "outcome": "DEVIATIONS",
+          "reason": "SEMANTIC_REVIEW"
         }
       }
     ],

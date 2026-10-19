@@ -41,8 +41,9 @@ def inconclusive(reason: str) -> dict:
 
 def validate_report(raw, registration: str, study: str) -> dict:
     data = json.loads(raw) if isinstance(raw, str) else raw
-    if not isinstance(data, dict) or set(data) != {'checks'}:
-        raise ValueError('Invalid report')
+    if not isinstance(data, dict) or 'checks' not in data:
+        raise ValueError('Invalid report shape: ' + type(data).__name__)
+    # Outer commentary/metadata has no decision authority; validate only the checks.
     checks = data['checks']
     if not isinstance(checks, list) or len(checks) != 4:
         raise ValueError('Expected four checks')
@@ -80,7 +81,11 @@ exists. Do not invent an excerpt saying an analysis was absent. Cite exact conti
 Return ONLY a JSON object with checks, exactly four objects in this order:
 primary_outcome, planned_analyses, population, sample_size.
 Each object has category, finding (MATCH/EXPLAINED/UNEXPLAINED/UNCLEAR),
-registration_quote, study_quote, explanation (10-1200 chars). No other keys.
+registration_quote, study_quote, explanation (10-1200 chars).
+The outer object MUST have a key named checks whose value is an array:
+{"checks":[{"category":"primary_outcome","finding":"MATCH","registration_quote":"exact excerpt","study_quote":"exact excerpt","explanation":"Evidence-based explanation"},{"category":"planned_analyses","finding":"MATCH","registration_quote":"exact excerpt","study_quote":"exact excerpt","explanation":"Evidence-based explanation"},{"category":"population","finding":"MATCH","registration_quote":"exact excerpt","study_quote":"exact excerpt","explanation":"Evidence-based explanation"},{"category":"sample_size","finding":"MATCH","registration_quote":"exact excerpt","study_quote":"exact excerpt","explanation":"Evidence-based explanation"}]}
+The values above only illustrate the schema. Replace every finding and excerpt with
+your independent judgment of the evidence. Do not copy example values.
 Evidence JSON follows:\n'''
     payload = canonical({'preregistration': registration, 'study': study})
     return validate_report(gl.nondet.exec_prompt(prompt + payload, response_format="json"), registration, study)
@@ -93,7 +98,8 @@ def assess(record: dict) -> dict:
         return inconclusive('EVIDENCE_UNAVAILABLE_OR_MISMATCH')
     try:
         return compare_documents(registration, study)
-    except Exception:
+    except Exception as error:
+        print('ProtocolLens validation:', type(error).__name__, str(error)[:120])
         return inconclusive('MODEL_OUTPUT_INVALID')
 
 def decision_fields(report: dict) -> list:

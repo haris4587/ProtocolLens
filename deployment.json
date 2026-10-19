@@ -2,13 +2,12 @@
   "network": "studionet",
   "chain_id": 61999,
   "rpc": "https://studio.genlayer.com/api",
-  "contract": "0x2B8f909AC388a5b61400a0c94Ee6D4e4401FfBB8",
+  "contract": "0x6E1fE2A506e4aA6a86c3a4d64d741A2c5a6E7427",
   "demo": "synthetic endpoint switch",
   "transactions": [
-    "0xba8115d8fb76366f9cbb93a548c7b59c2eb17b255de2e553b922d9d6d286e44f",
-    "0x792d360c921ce9b71015fc8022e4846a5fe7ae97ea04e1530cc579964c1335e3",
-    "0x0d656f50bb0e3c2e7d3a03adf1b97ff8308382545a3eac39ac885341caba558c",
-    "0x97357c29a57c3e5ead9f484f31b7cadfd92f984fa07fe595bbdc5ca3a30ac063"
+    "0x2356d0e589e65aef6df512aaeb39a045ccb89670bb852141d66a1b44be00a880",
+    "0xd7a882e5590efdd697073289c85f43650850e385b2b09696c4aa5a7423ae5548",
+    "0x500e2c45fd5ade323a303e0ca4435b646770990579fbde34a4df33c8328cf014"
   ],
-  "source_sha256": "c592d3b67cffc2fa063a8d11dff55d863d3e0b31df23d18018a29714e7c5f140"
+  "source_sha256": "bbdd7b352510f26c128ebcd3838f2419e1e1c7b9b303ae74027094758a00b6e7"
 }

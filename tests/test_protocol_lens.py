@@ -126,3 +126,11 @@ def test_actual_sdk_validator_accepts_grounded_agreement(deployed):
     vm.mock_llm('Check this proposed research audit','true')
     vm.mock_llm('You audit research reporting',report())
     assert vm.run_validator() is True
+
+def test_outer_model_metadata_does_not_discard_valid_checks(deployed):
+    vm,c=deployed
+    data=json.loads(report());data['summary']='Untrusted auxiliary metadata is ignored.'
+    mocks(vm,json.dumps(data));c.review('1')
+    actual=get(c)['history'][0]['report']
+    assert actual['outcome']=='DEVIATIONS'
+    assert set(actual)=={'checks','outcome','reason'}

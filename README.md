@@ -4,9 +4,9 @@
 
 Public app: https://protocollens.itzanza2.chatgpt.site
 
-Network: Studionet (61999). Contract: `0x2B8f909AC388a5b61400a0c94Ee6D4e4401FfBB8`.
+Network: Studionet (61999). Contract: `0x6E1fE2A506e4aA6a86c3a4d64d741A2c5a6E7427`.
 
-> Status: website and contract deployed; live semantic acceptance is incomplete. Both real review attempts safely returned INCONCLUSIVE / MODEL_OUTPUT_INVALID. See docs/LIVE_TEST.md.
+> Live verified: finalized Full Consensus returned DEVIATIONS for an unexplained primary-outcome switch. Source bytes, document hashes, transaction success and receipt hashes are verified. See docs/LIVE_TEST.md.
 
 ## Workflow
 
@@ -48,7 +48,7 @@ genvm-lint check contracts/protocol_lens.py
 
 Direct tests use the pinned official GenVM SDK v0.2.16. The first run downloads its official runtime. Tests distinguish mocked direct execution, actual SDK validator-closure checks, host-harness checks and the separate recorded live test. No mocked test is offered as live consensus evidence.
 
-`npm run record:live` checks the deployed source against the repository, finalized review state, successful transaction execution and receipt hashes. `npm run verify:live` additionally requires the expected live deviation classification and currently fails. It requires network access to Studionet. See [deployment](docs/DEPLOYMENT.md), [live evidence](docs/LIVE_TEST.md) and [demo arguments](docs/demo-arguments.json).
+`npm run record:live` checks the deployed source against the repository, finalized review state, successful transaction execution and receipt hashes. `npm run verify:live` additionally requires the expected live deviation classification and passes for the recorded demo. It requires network access to Studionet. `npm run verify:site` checks public assets, the configured contract address and RPC CORS. See [deployment](docs/DEPLOYMENT.md), [live evidence](docs/LIVE_TEST.md) and [demo arguments](docs/demo-arguments.json).
 
 ## Scope and limitations
 
