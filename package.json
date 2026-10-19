@@ -1,0 +1,17 @@
+{
+  "name": "protocollens",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test:web": "node --test tests/web.test.mjs",
+    "verify:live": "node scripts/verify-live.mjs",
+    "record:live": "node scripts/verify-live.mjs --record"
+  },
+  "dependencies": {
+    "genlayer-js": "1.1.8"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

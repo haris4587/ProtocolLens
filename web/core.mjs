@@ -1,0 +1,6 @@
+export const PINNED=/^https:\/\/raw\.githubusercontent\.com\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+\/[0-9a-f]{40}\/[A-Za-z0-9_./-]+\.txt$/;
+export function validURL(url){return PINNED.test(url)&&!url.includes('/..');}
+export function validateAddress(address){return /^0x[0-9a-fA-F]{40}$/.test(address);}
+export function canonical(value){if(Array.isArray(value))return '['+value.map(canonical).join(',')+']';if(value&&typeof value==='object')return '{'+Object.keys(value).sort().map(k=>JSON.stringify(k)+':'+canonical(value[k])).join(',')+'}';return JSON.stringify(value);}
+export async function sha256(bytes){return Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),b=>b.toString(16).padStart(2,'0')).join('');}
+export async function verifyBundle(record){const base={...record,history:[]};delete base.commitment;if(await sha256(new TextEncoder().encode(canonical(base)))!==record.commitment)throw Error('Record commitment mismatch');let previous=record.commitment;for(const entry of record.history){if(entry.previous_hash!==previous||entry.commitment!==record.commitment)throw Error('Broken history link');const unsigned={...entry};delete unsigned.decision_hash;if(await sha256(new TextEncoder().encode(canonical(unsigned)))!==entry.decision_hash)throw Error('Decision hash mismatch');previous=entry.decision_hash;}return true;}

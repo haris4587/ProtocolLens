@@ -1,0 +1,14 @@
+{
+  "network": "studionet",
+  "chain_id": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "contract": "0x2B8f909AC388a5b61400a0c94Ee6D4e4401FfBB8",
+  "demo": "synthetic endpoint switch",
+  "transactions": [
+    "0xba8115d8fb76366f9cbb93a548c7b59c2eb17b255de2e553b922d9d6d286e44f",
+    "0x792d360c921ce9b71015fc8022e4846a5fe7ae97ea04e1530cc579964c1335e3",
+    "0x0d656f50bb0e3c2e7d3a03adf1b97ff8308382545a3eac39ac885341caba558c",
+    "0x97357c29a57c3e5ead9f484f31b7cadfd92f984fa07fe595bbdc5ca3a30ac063"
+  ],
+  "source_sha256": "c592d3b67cffc2fa063a8d11dff55d863d3e0b31df23d18018a29714e7c5f140"
+}
