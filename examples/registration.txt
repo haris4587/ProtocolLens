@@ -1,0 +1,8 @@
+SYNTHETIC DEMONSTRATION — not a real clinical study.
+Protocol PL-001, registered version 1, 2025-01-10.
+Research question: Does a four-week walking program improve sleep in adults?
+Primary outcome: Change in self-reported sleep quality score from baseline to week 4.
+Secondary outcome: Mean daily step count at week 4.
+Planned analyses: Intention-to-treat comparison of sleep quality change between randomized groups; secondary comparison of mean daily step count.
+Population: Adults aged 25–60 with self-reported poor sleep, randomized to walking program or usual activity.
+Sample size: 120 participants, 60 in each group.
