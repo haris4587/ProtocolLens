@@ -1,10 +1,10 @@
 {
   "schema": "protocollens.ui-workflow.v1",
-  "checked_at": "2026-10-21T03:31:21.680Z",
+  "checked_at": "2026-10-21T03:45:34.668Z",
   "origin": "https://protocollens.itzanza2.chatgpt.site",
   "verification_type": "DOM handlers + live RPC; no visual/browser QA",
   "artifacts": {
-    "html_sha256": "83b9da5b8936e35c691bd02a178ace3c94c7a02015f804c9581024c0585120eb",
+    "html_sha256": "aa821600df4619359351bd4505a40f1363b9e618f51fd18c5b8c898e8c3a6c52",
     "app_sha256": "4f8532a82529994ca02cb633cacee3fc820bb1b6c6d348e7d4980c6c258f8ced"
   },
   "chain_id": 61999,
@@ -18,8 +18,8 @@
   "observed": {
     "network": "Verified Studionet chain 61999 · deployed source SHA-256 matches the release.",
     "example": "Both remote snapshots verified. The seven fields below are ready for commit_study. No file upload needed for this example.",
-    "commitment": "FINALIZED · commit_study · 8:31:11 PM · execution SUCCESS",
-    "review": "FINALIZED · review · 8:31:13 PM · execution SUCCESS",
+    "commitment": "FINALIZED · commit_study · 8:45:25 PM · execution SUCCESS",
+    "review": "FINALIZED · review · 8:45:26 PM · execution SUCCESS",
     "instruction": "Call review with review_id = 2 from Studio account 0x3f10904B0A2bc1Aaaddfc4627Cb071476E03Df02.",
     "export": "Commitment and history hashes verified. Bundle exported."
   },

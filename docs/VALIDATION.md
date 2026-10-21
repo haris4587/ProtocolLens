@@ -22,3 +22,7 @@ Browser layout and interaction QA were not run because this managed environment 
 - `npm run verify:ui` exercises the built frontend's actual DOM handlers against real document URLs and real RPC: example verification, copying inputs, commitment ID recovery, finalized consensus result and JSON export.
 - `npm run verify:ui:public` repeats that test against downloaded production HTML/JS and records their hashes in docs/evidence/reviewer-ui-live.json.
 - These tests use a DOM implementation and do not claim browser rendering, mobile or extension-wallet QA. Signing was separately exercised through the live Studio browser UI.
+
+## Visual identity refresh
+
+The public frontend now uses an ink-blue research-lab palette, electric-blue controls, coral deviation indicators and a protocol-comparison graphic. The refresh changes HTML/CSS only; the deployed contract and transaction workflow are preserved. The build, nine web tests and live DOM/RPC workflow checks pass. Primary text, secondary text, button labels (including hover) and deviation badges were checked for contrast. Visual browser/mobile QA remains unverified in this environment. AGENTS.md records the user's preference for distinct visual identities across GenLayer projects.
