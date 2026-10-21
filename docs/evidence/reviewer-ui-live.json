@@ -1,0 +1,98 @@
+{
+  "schema": "protocollens.ui-workflow.v1",
+  "checked_at": "2026-10-21T03:31:21.680Z",
+  "origin": "https://protocollens.itzanza2.chatgpt.site",
+  "verification_type": "DOM handlers + live RPC; no visual/browser QA",
+  "artifacts": {
+    "html_sha256": "83b9da5b8936e35c691bd02a178ace3c94c7a02015f804c9581024c0585120eb",
+    "app_sha256": "4f8532a82529994ca02cb633cacee3fc820bb1b6c6d348e7d4980c6c258f8ced"
+  },
+  "chain_id": 61999,
+  "contract": "0x6E1fE2A506e4aA6a86c3a4d64d741A2c5a6E7427",
+  "workflow": {
+    "review_id": "2",
+    "commit_transaction": "0x655b1dd508c849f94a273fbb9f1965b43d9f7f48123b96ea9778a3aa7fed0799",
+    "review_transaction": "0xfd753bbf4162819f762f66eec498e0ef8537d152d8fb44fcbe163cd60237a744",
+    "signer": "0x3f10904B0A2bc1Aaaddfc4627Cb071476E03Df02"
+  },
+  "observed": {
+    "network": "Verified Studionet chain 61999 · deployed source SHA-256 matches the release.",
+    "example": "Both remote snapshots verified. The seven fields below are ready for commit_study. No file upload needed for this example.",
+    "commitment": "FINALIZED · commit_study · 8:31:11 PM · execution SUCCESS",
+    "review": "FINALIZED · review · 8:31:13 PM · execution SUCCESS",
+    "instruction": "Call review with review_id = 2 from Studio account 0x3f10904B0A2bc1Aaaddfc4627Cb071476E03Df02.",
+    "export": "Commitment and history hashes verified. Bundle exported."
+  },
+  "bundle": {
+    "schema": "protocollens.receipt.v1",
+    "chain_id": 61999,
+    "contract": "0x6E1fE2A506e4aA6a86c3a4d64d741A2c5a6E7427",
+    "read_state": "LATEST_FINAL",
+    "transaction": {
+      "hash": "0xfd753bbf4162819f762f66eec498e0ef8537d152d8fb44fcbe163cd60237a744",
+      "method": "review",
+      "sender": "0x3f10904B0A2bc1Aaaddfc4627Cb071476E03Df02",
+      "status": "FINALIZED",
+      "execution": "SUCCESS"
+    },
+    "record": {
+      "commitment": "42c0d39770401efd90b217581af9f862b4000e634e2960b605a646be17f5bd33",
+      "creator": "0x3f10904B0A2bc1Aaaddfc4627Cb071476E03Df02",
+      "history": [
+        {
+          "attempt": 1,
+          "commitment": "42c0d39770401efd90b217581af9f862b4000e634e2960b605a646be17f5bd33",
+          "decision_hash": "cdda4ca0aaa7a0dc302feca5203ce7c852a13882f56649ee1141c1160faf04e8",
+          "previous_hash": "42c0d39770401efd90b217581af9f862b4000e634e2960b605a646be17f5bd33",
+          "report": {
+            "checks": [
+              {
+                "category": "primary_outcome",
+                "explanation": "The preregistration defines the primary outcome as change in self-reported sleep quality score from baseline to week 4, but the study report lists mean daily step count at week 4 as the primary outcome. The study explicitly notes 'The outcome hierarchy was changed from the registered protocol. No reason for this change is provided,' meaning the swap is not justified. This is an unexplained deviation in the primary outcome designation.",
+                "finding": "UNEXPLAINED",
+                "registration_quote": "Primary outcome: Change in self-reported sleep quality score from baseline to week 4.",
+                "study_quote": "Primary outcome: Mean daily step count at week 4."
+              },
+              {
+                "category": "planned_analyses",
+                "explanation": "The planned analyses described in the preregistration (intention-to-treat comparison of sleep quality change between randomized groups; secondary comparison of mean daily step count) are identical to those reported in the study. No analyses appear to be missing or added.",
+                "finding": "MATCH",
+                "registration_quote": "Planned analyses: Intention-to-treat comparison of sleep quality change between randomized groups; secondary comparison of mean daily step count.",
+                "study_quote": "Analyses reported: Intention-to-treat comparison of sleep quality change between randomized groups; secondary comparison of mean daily step count."
+              },
+              {
+                "category": "population",
+                "explanation": "The study population described in the report (adults aged 25–60 with self-reported poor sleep, randomized to walking program or usual activity) matches the preregistration population exactly. Eligibility criteria and randomization scheme are unchanged.",
+                "finding": "MATCH",
+                "registration_quote": "Population: Adults aged 25–60 with self-reported poor sleep, randomized to walking program or usual activity.",
+                "study_quote": "Population: Adults aged 25–60 with self-reported poor sleep, randomized to walking program or usual activity."
+              },
+              {
+                "category": "sample_size",
+                "explanation": "Both the preregistration and the study report specify a total sample size of 120 participants with 60 in each group. There is no mention of recruitment shortfalls or exclusions, and the numbers match exactly.",
+                "finding": "MATCH",
+                "registration_quote": "Sample size: 120 participants, 60 in each group.",
+                "study_quote": "Sample size: 120 participants, 60 in each group."
+              }
+            ],
+            "outcome": "DEVIATIONS",
+            "reason": "SEMANTIC_REVIEW"
+          }
+        }
+      ],
+      "id": "2",
+      "policy": "protocollens-1",
+      "registration": {
+        "bytes": 628,
+        "sha256": "b96c9871ca67897a3a01897b8275456517e2c2e2904767ba203efa434805b124",
+        "url": "https://raw.githubusercontent.com/haris4587/ProtocolLens/a5f97b0fb4838f7a83f219a103023a1346cab2c7/examples/registration.txt"
+      },
+      "study": {
+        "bytes": 735,
+        "sha256": "51eaf302eb9e30f4b6124853e8ca7810ffe5b1db3bd4494ae5844785a02e211b",
+        "url": "https://raw.githubusercontent.com/haris4587/ProtocolLens/a5f97b0fb4838f7a83f219a103023a1346cab2c7/examples/study.txt"
+      },
+      "title": "Steward workflow verification — endpoint switch (synthetic) 2026-10-21"
+    }
+  }
+}

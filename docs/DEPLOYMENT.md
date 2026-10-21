@@ -11,13 +11,9 @@
 
 The deployed source is compared byte-for-byte by `scripts/verify-live.mjs`; its checksum is saved in deployment.json. The public app is a bundled static build. Sites source synchronization and deployment are separate from the public GitHub mirror; no source credentials or runtime secrets are tracked.
 
-## Reproduce in Studio
+## Reproduce with the existing contract
 
-1. Import `contracts/protocol_lens.py`, open Run and Debug, and attach the release address via the address control next to Deployed at. To deploy your own instance, use Deploy new instance and record its address.
-2. Use the built-in account selector; keep Full Consensus and simulation disabled.
-3. To inspect the existing demonstration, read `get_review("1")` with the state selector set to Finalized. The website requests LATEST_FINAL explicitly.
-4. To create another comparison, call `commit_study` using the seven values in demo-arguments.json. Inspect execution and wait for FINALIZED.
-5. Call `review` with the newly created record ID from the same built-in account. Wait for successful execution and FINALIZED before relying on the report.
+Follow [the exact reviewer workflow](REVIEWER_WORKFLOW.md). Import the existing release by address using Studio's **Import Contract** dialog beside Upload; uploading a Python file alone does not attach a fresh session to the deployment. No deployment or upgrade is required. Both commitment and consensus review have been repeated from a fresh Studio built-in account on 2026-10-21 (record 2). Their hashes are in deployment.json under workflow, and independently verifiable evidence is in docs/evidence/reviewer-transactions.json.
 
 ## Official references checked
 

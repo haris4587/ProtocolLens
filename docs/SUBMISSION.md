@@ -10,3 +10,8 @@ Evidence:
 - Contract source: contracts/protocol_lens.py
 - Live evidence: docs/LIVE_TEST.md and docs/evidence/live-review.json
 - Validation: docs/VALIDATION.md
+
+
+## Steward follow-up
+
+Use [the updated reviewer workflow](REVIEWER_WORKFLOW.md) and [the steward response](STEWARD_RESPONSE.md). Reviewers can import the existing release by address, submit both methods with their own Studio built-in account, track transactions in ProtocolLens and export the finalized receipt. The recorded fresh run is record 2; reviewers creating their own run must use the newly returned ID.

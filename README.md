@@ -10,13 +10,13 @@ Network: Studionet (61999). Contract: `0x6E1fE2A506e4aA6a86c3a4d64d741A2c5a6E742
 
 ## Workflow
 
-1. Create complete UTF-8 plaintext snapshots of the preregistration and study. Include original public source links, study identifiers and version dates. Commit the snapshots to a public GitHub repository.
-2. In **Prepare comparison**, select the exact files and their raw GitHub URLs pinned to a full 40-character commit. The browser computes SHA-256 hashes and byte lengths locally.
-3. Open GenLayer Studio, import `contracts/protocol_lens.py` if needed, select the existing deployment address and call `commit_study` with the prepared arguments using Studio's built-in account. Do not redeploy to read the existing demo. No external wallet, MetaMask or private-key export is required.
-4. Once the commitment transaction succeeds, call `review(review_id)` from the same Studio account. Confirm **Normal (Full Consensus)**, with simulation disabled.
-5. Wait for successful execution and FINALIZED status. Load the contract in the public app to read `LATEST_FINAL` state. Inspect exact excerpts and every prior attempt; verify and export a JSON receipt.
+1. Open **Create & review** in the public app and load the synthetic example, or hash your own complete document snapshots.
+2. In Studio use **Your Contracts → Import Contract** (document/down-arrow icon), paste the existing release address, then open **Run and Debug**. No redeployment is needed.
+3. Call `commit_study` with the app's seven individually copyable fields using Studio's built-in account. Paste its transaction hash back into **Track commitment** to recover the finalized new record ID.
+4. From the same Studio account call `review(new_id)` in **Normal (Full Consensus)** with simulation off. Paste its hash into **Track consensus review**.
+5. Inspect the finalized decision, exact excerpts and append-only history; verify and export a transaction-linked JSON receipt.
 
-The website deliberately sends signing actions to Studio. It never impersonates Studio's account and never stores keys. The public app itself reads real contract state using the pinned `genlayer-js` SDK.
+**[Exact reviewer instructions, recovery steps and reproducible end-to-end evidence](docs/REVIEWER_WORKFLOW.md).** The **Verify recorded end-to-end example** button rechecks both real writes without sending a transaction. The frontend verifies Studionet 61999, the deployed source checksum, transaction destination/method/mode/execution, creator, committed arguments and receipt hashes. Signing remains in Studio; the app never stores keys.
 
 ## Intelligent Contract
 
@@ -48,7 +48,7 @@ genvm-lint check contracts/protocol_lens.py
 
 Direct tests use the pinned official GenVM SDK v0.2.16. The first run downloads its official runtime. Tests distinguish mocked direct execution, actual SDK validator-closure checks, host-harness checks and the separate recorded live test. No mocked test is offered as live consensus evidence.
 
-`npm run record:live` checks the deployed source against the repository, finalized review state, successful transaction execution and receipt hashes. `npm run verify:live` additionally requires the expected live deviation classification and passes for the recorded demo. It requires network access to Studionet. `npm run verify:site` checks public assets, the configured contract address and RPC CORS. See [deployment](docs/DEPLOYMENT.md), [live evidence](docs/LIVE_TEST.md) and [demo arguments](docs/demo-arguments.json).
+`npm run record:live` checks the deployed source against the repository, finalized review state, successful transaction execution and receipt hashes. `npm run verify:live` additionally requires the expected live deviation classification and passes for the recorded demo. It requires network access to Studionet. `npm run verify:site` checks public assets, the configured contract address and RPC CORS. `npm run verify:reviewer` checks the fresh reviewer run on the existing deployment. `npm run verify:ui:public` exercises the actual published frontend handlers with live RPC and exports evidence. See [deployment](docs/DEPLOYMENT.md), [live evidence](docs/LIVE_TEST.md) and [demo arguments](docs/demo-arguments.json).
 
 ## Scope and limitations
 

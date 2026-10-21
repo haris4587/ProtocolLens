@@ -7,12 +7,16 @@
     "test:web": "node --test tests/web.test.mjs",
     "verify:live": "node scripts/verify-live.mjs",
     "record:live": "node scripts/verify-live.mjs --record",
-    "verify:site": "node scripts/verify-site.mjs"
+    "verify:site": "node scripts/verify-site.mjs",
+    "verify:ui": "node scripts/verify-ui-live.mjs",
+    "verify:ui:public": "node scripts/verify-ui-live.mjs --public",
+    "verify:reviewer": "node scripts/verify-reviewer.mjs"
   },
   "dependencies": {
     "genlayer-js": "1.1.8"
   },
   "devDependencies": {
-    "esbuild": "0.28.2"
+    "esbuild": "0.28.2",
+    "linkedom": "0.18.12"
   }
 }
