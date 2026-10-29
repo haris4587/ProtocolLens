@@ -18,6 +18,12 @@ Network: Studionet (61999). Contract: `0x6E1fE2A506e4aA6a86c3a4d64d741A2c5a6E742
 
 **[Exact reviewer instructions, recovery steps and reproducible end-to-end evidence](docs/REVIEWER_WORKFLOW.md).** The **Verify recorded end-to-end example** button rechecks both real writes without sending a transaction. The frontend verifies Studionet 61999, the deployed source checksum, transaction destination/method/mode/execution, creator, committed arguments and receipt hashes. Signing remains in Studio; the app never stores keys.
 
+## Milestone v1: reproducible evidence audits
+
+The new read-only audit toolkit reauthenticates pinned source bytes, validates all receipt attempts, locates every exact excerpt by line and UTF-8 byte range, and exports printable HTML plus JSON. Run `npm run audit:evidence -- --live` against the **same deployment**, or audit a receipt offline with the original snapshots. Imported receipts are explicitly unanchored. The browser audit controls are implemented and integration tested; publication over the existing hosted app is pending Site access.
+
+See [Milestone v1 changes, reproduction commands, evidence and limitations](docs/MILESTONE_V1.md).
+
 ## Intelligent Contract
 
 The contract checks four decision-critical categories: primary outcome, planned analyses, population and sample size. Each is MATCH, EXPLAINED, UNEXPLAINED or UNCLEAR. Deterministic aggregation returns:
